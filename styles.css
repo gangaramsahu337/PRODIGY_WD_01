@@ -1,0 +1,144 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #f4f4f4;
+    background-color: #000;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1em 0;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 1em;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    /* color: #fff; */
+    color: #FFD700;
+}
+
+.navbar.scrolled {
+    background-color: #666;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    opacity: 0;
+}
+
+.hero.show {
+    opacity: 1;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    background-color: #333333;
+    border-bottom: 1px solid #444;
+    margin-bottom: 1em;
+}
+
+.content h2 {
+    margin-bottom: 0.5em;
+}
+
+.content p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+    flex: 1;
+    padding-left: 1em;
+}
+
+.content img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 1em;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Specific background for constellations page */
+.hero.constellations-page {
+    background: url('images/StarList/Depositphotos_121257640_s-2019.webp') no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+}
+
+.hero.stars-page {
+    background: url('Images/StarList/pexels-philippe-donn-1257860.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+}
+
+.hero.deepskyobjects-page {
+    background: url('Images/dsolist/pillars_of_creation.webp') no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+}
+
+.hero.skyevents-page {
+    background: url('images/StarList/20526349219_052849eedb_Optimized-jpg.webp') no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content img {
+        max-width: 100%;
+        margin: 0 auto 1em auto;
+        float: none;
+    }
+
+    .content p {
+        padding-left: 0;
+    }
+}
