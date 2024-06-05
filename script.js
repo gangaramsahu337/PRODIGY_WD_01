@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial background image
     changeBackgroundImage();
 
-    // Change background image every 5 seconds
+    // Change background image every 10 seconds
     setInterval(changeBackgroundImage, 10000);
   } else {
     heroSection.classList.add("show");
